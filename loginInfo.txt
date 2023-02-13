@@ -1,4 +1,2 @@
-{email:'atiqur@gmail.com',password:'atiqur01'},
-{email:'atik@gmail.com',password:'atik25'},
-{email:'admin@gmail.com',password:'admin'},
+
     

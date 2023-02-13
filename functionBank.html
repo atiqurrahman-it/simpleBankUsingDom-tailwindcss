@@ -11,38 +11,30 @@
   <body>
     <header>
       <h1
-        class="text-5xl font-semibold italic hover:not-italic text-center py-5 bg-sky-500 hover:bg-sky-700"
+        class="text-5xl font-semibold italic hover:not-italic text-center py-5"
       >
         Let's get some <span class="font-bold text-violet-700">money</span>
       </h1>
     </header>
-
     <main class="bg-sky-300 py-12">
-      <button
-        onclick="window.location.href='functionBank.html';"
-        class="ml-5 text-3xl text-white font-medium p-4 bg-sky-500 border-0 rounded-lg hover:bg-sky-700"
-      >
-        Functional Bank Project
-      </button>
-
       <section>
         <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto mt-12 text-white">
-          <div class="bg-pink-600 p-5 rounded-lg">
+          <div class="bg-fuchsia-700 p-5 rounded-lg">
             <h1 class="font-medium text-3xl">Deposit</h1>
             <h2 class="font-medium text-4xl">
               $ <span id="total-deposit">00</span>
             </h2>
           </div>
-          <div class="bg-cyan-600 p-5 rounded-lg">
+          <div class="bg-green-600 p-5 rounded-lg">
             <h1 class="font-medium text-3xl">Withdraw</h1>
             <h2 class="font-medium text-4xl">
-              $ <span id="withdraw">00</span>
+              $ <span id="total-withdraw">00</span>
             </h2>
           </div>
           <div class="bg-yellow-600 p-5 rounded-lg">
             <h1 class="font-medium text-3xl">Balance</h1>
             <h2 class="font-medium text-4xl">
-              $ <span id="balance">500</span>
+              $ <span id="total-balance">1240</span>
             </h2>
           </div>
         </div>
@@ -66,7 +58,7 @@
               Deposit
             </button>
           </div>
-          <div class="bg-sky-400 p-5 rounded-lg">
+          <div class="bg-green-500 p-5 rounded-lg">
             <h1 class="font-medium text-3xl mb-4 text-white">
               Please Withdraw
             </h1>
@@ -87,6 +79,8 @@
         </div>
       </section>
     </main>
-    <script src="js/bank.js"></script>
+    <script src="functionaJs/utilities.js"></script>
+    <script src="functionaJs/deposit.js"></script>
+    <script src="functionaJs/withdraw.js"></script>
   </body>
 </html>
