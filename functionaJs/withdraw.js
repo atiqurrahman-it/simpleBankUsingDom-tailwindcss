@@ -7,7 +7,7 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
    const previousTotalAmount=getTextElementValueById('total-balance')
    const TotalBalance=previousTotalAmount-newWithdrawAmount
    if(newWithdrawAmount>previousTotalAmount){
-    alert("tor abbar ato taka nai re ba !!!")
+    alert("you have not sufficient balance to withdraw!!!")
     return 0
    }
    setTextElementValueById('total-balance',TotalBalance)

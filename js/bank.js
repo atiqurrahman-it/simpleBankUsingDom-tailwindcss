@@ -1,13 +1,15 @@
 
 let balanceElement=document.getElementById('balance')
 
-// console.log(withdraw)
-// console.log(balance)
-
 document.getElementById('btn-deposit').addEventListener('click',function(){
     // input deposit amount
     const depositFiled=document.getElementById('depositFiled')
     const newDepositAmount=parseInt(depositFiled.value)
+     // clear the deposit filed
+     depositFiled.value=''
+    if(isNaN(newDepositAmount)){
+        return 0;
+    }
     
     // current deposit amount
     const DepositElement=document.getElementById('total-deposit')
@@ -23,8 +25,7 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
     const totalBalance=currentTotalBalance+ newDepositAmount
     balanceElement.innerText=totalBalance
 
-    // clear the deposit filed
-    depositFiled.value=''
+   
 
 })
 
@@ -32,6 +33,12 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     // input withdraw amount 
     const withdrawFiled=document.getElementById('withdrawFiled')
     const newWithdrawAmount=parseInt(withdrawFiled.value)
+      // clear the withdraw filed
+      withdrawFiled.value=''
+
+    if(isNaN(newWithdrawAmount)){
+        return 0;
+    }
 
     // current withdraw total amount 
     let withdrawElement=document.getElementById('withdraw')
@@ -45,12 +52,10 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     // let balanceElement=document.getElementById('balance')
     const currentTotalBalance=parseInt(balanceElement.innerText)
   
-    // clear the withdraw filed
-    withdrawFiled.value=''
-
+  
     if(newWithdrawAmount>currentTotalBalance ){
-        alert("tor bager ato taka    nai ")
-        return;
+        alert("you have not sufficient balance to withdraw")
+        return 0;
     }
     const totalBalance=currentTotalBalance- newWithdrawAmount
     //set total withdraw balance
